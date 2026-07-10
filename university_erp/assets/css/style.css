@@ -1,0 +1,366 @@
+/* Main Styles for Cafe Massa */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.food-card {
+    height: 100%;
+}
+
+.food-card .card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.food-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #e55a2b 0%, #ff6b35 100%);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: #ff6b35;
+    border-color: #ff6b35;
+}
+
+.btn-outline-primary:hover {
+    background: #ff6b35;
+    border-color: #ff6b35;
+}
+
+/* Badges */
+.badge {
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: 500;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6b35;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, rgba(42,157,143,0.1) 100%);
+}
+
+/* Category Cards */
+.category-card {
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, rgba(42,157,143,0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Chef Cards */
+.chef-card {
+    text-align: center;
+}
+
+.chef-card img {
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Food Cards */
+.food-card .card-body {
+    padding: 1.5rem;
+}
+
+.food-card .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.food-card .card-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Steps */
+.steps {
+    position: relative;
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #dee2e6;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.step.active .step-circle {
+    background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+    color: white;
+    box-shadow: 0 5px 15px rgba(255,107,53,0.3);
+}
+
+.step-line {
+    position: absolute;
+    top: 25px;
+    height: 3px;
+    background: #dee2e6;
+    z-index: 1;
+}
+
+.step-line.active {
+    background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+}
+
+/* Form Styles */
+.form-control, .form-select {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #ff6b35;
+    box-shadow: 0 0 0 0.25rem rgba(255,107,53,0.25);
+}
+
+/* Alert Styles */
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff6b35 !important;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #ff6b35;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .steps .step-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #ff6b35;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Toast Notifications */
+.toast-container {
+    z-index: 9999;
+}
+
+/* Quantity Input */
+.input-group .btn-quantity {
+    width: 40px;
+}
+
+.input-group .quantity-input {
+    text-align: center;
+}
+
+/* Payment Cards */
+.payment-method .form-check-label {
+    cursor: pointer;
+    width: 100%;
+}
+
+.payment-method .form-check-input:checked + .form-check-label {
+    border-color: #ff6b35 !important;
+    background: rgba(255,107,53,0.05);
+}
+
+/* Status Badges */
+.badge-status {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.badge-status.pending {
+    background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+}
+
+.badge-status.preparing {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+}
+
+.badge-status.dispatched {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.badge-status.delivered {
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+}
+
+.badge-status.cancelled {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+/* Chef Rating Stars */
+.star-rating {
+    color: #ffc107;
+    font-size: 1.2rem;
+}
+
+/* Track Order */
+.track-order .step {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.track-order .step::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #dee2e6;
+}
+
+.track-order .step.active::before {
+    background: #ff6b35;
+    box-shadow: 0 0 0 5px rgba(255,107,53,0.2);
+}
+
+.track-order .step.completed::before {
+    background: #28a745;
+}
+
+.track-order .step-line {
+    position: absolute;
+    left: 9px;
+    top: 20px;
+    bottom: -30px;
+    width: 2px;
+    background: #dee2e6;
+}
+
+.track-order .step.completed .step-line {
+    background: #28a745;
+}
+
+.track-order .step:last-child .step-line {
+    display: none;
+}
